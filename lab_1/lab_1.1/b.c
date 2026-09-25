@@ -19,10 +19,10 @@ int main() {
 
 	for (int i = 0; i<5; i++){
 		err = pthread_create(&tid[i], NULL, mythread, NULL);
-	        if (err) {
-        	    printf("main: pthread_create() failed: %s\n", strerror(err));
-                    return -1;
-        	}
+	    if (err) {
+        	printf("main: pthread_create() failed: %s\n", strerror(err));
+            return -1;
+        }
 	}
 
 	pthread_exit(NULL);
