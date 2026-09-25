@@ -39,12 +39,11 @@ int main() {
 	printf("main [%d %d %d]: Hello from main!\n", getpid(), getppid(), gettid());
 
 	for (int i = 0; i < 5; i++){
-		
 		err = pthread_create(&tid[i], NULL, mythread, (void*)(long)i);
-	        if (err) {
-        	    printf("main: pthread_create() failed: %s\n", strerror(err));
+	    if (err) {
+        	printf("main: pthread_create() failed: %s\n", strerror(err));
 		    return -1;
-        	}
+        }
 	}
 
 	getchar(); 
