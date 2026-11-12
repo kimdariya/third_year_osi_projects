@@ -1,0 +1,8 @@
+1.6. Разработать собственную функцию для создания ядерных потоков - аналог
+pthread_create():
+
+ - int mythread_create(mythread_t thread, void *(start_routine), void *arg);
+Функция должна возвращать успех-неуспех.
+Оформите реализацию в виде библиотеки.
+
+- дополнительно можно реализовать аналог pthread_join(), pthread_detach(),pthread_cancel()
